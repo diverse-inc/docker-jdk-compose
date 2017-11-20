@@ -14,6 +14,7 @@ RUN set -ex \
    --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
      docker=${DOCKER_VERSION} \
      py-pip=${PYTHON_PIP_VERSION} \
+     git \
      bash \
      curl \
  && pip install docker-compose==${DOCKER_COMPOSE_VERSION} \
