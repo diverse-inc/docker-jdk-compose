@@ -1,8 +1,8 @@
 FROM openjdk:8-jdk-alpine
 
-ENV DOCKER_VERSION 17.07.0-r0
+ENV DOCKER_VERSION 17.10.0-r0
 ENV PYTHON_PIP_VERSION 9.0.1-r1
-ENV REDIS_VERSION 4.0.2-r1
+ENV NODEJS_VERSION 8.9.1-r0
 ENV DOCKER_COMPOSE_VERSION 1.17.1
 ENV AWS_EB_CLI_VERSION 3.12.1
 ENV GRADLE_VERSION 4.2.1
@@ -15,7 +15,9 @@ RUN set -ex \
    --repository http://dl-cdn.alpinelinux.org/alpine/edge/community \
      docker=${DOCKER_VERSION} \
      py-pip=${PYTHON_PIP_VERSION} \
-     redis=${REDIS_VERSION} \
+     nodejs=${NODEJS_VERSION} \
+     nodejs-npm=${NODEJS_VERSION} \
+     git \
      bash \
      curl \
  && pip install docker-compose==${DOCKER_COMPOSE_VERSION} \
