@@ -27,4 +27,3 @@ RUN set -ex \
  && unzip gradle-${GRADLE_VERSION}-bin.zip -d /opt \
  && rm gradle-${GRADLE_VERSION}-bin.zip \
  && apk del curl
-
